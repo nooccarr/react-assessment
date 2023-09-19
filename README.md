@@ -8,7 +8,7 @@ First install dependencies:
 npm i
 ```
 
-To run node server:
+To run react application:
 
 ```sh
 npm run dev
