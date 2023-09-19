@@ -1,4 +1,4 @@
-const Item = ({ item, handleClick }) => {
+const Item = ({ item, handleClick, handleDelete }) => {
   const { id, name, checked } = item;
 
   return (
@@ -14,6 +14,9 @@ const Item = ({ item, handleClick }) => {
           onClick={(e) => handleClick(id)}
         />
       </label>
+      <button onClick={(e) => handleDelete(id)}>
+        Delete
+      </button>
     </div>
   );
 };

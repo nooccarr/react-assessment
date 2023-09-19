@@ -1,13 +1,4 @@
-import { useState } from "react";
-
-const Form = () => {
-  const [name, setName] = useState("");
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-
-    setName("");
-  };
+const Form = ({ items, name, setName, handleSubmit}) => {
 
   return (
     <form onSubmit={handleSubmit}>
