@@ -34,6 +34,11 @@ const App = () => {
     setItems(updatedItems);
   };
 
+  const handleClearCompleted = () => {
+    const updatedItems = items.filter((item) => !item.checked);
+    setItems(updatedItems);
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
     const newItem = {
@@ -51,6 +56,7 @@ const App = () => {
       <h1>Shipping List</h1>
       <ItemList items={items} handleClick={handleClick} handleDelete={handleDelete} />
       <Form item={items} setName={setName} name={name} handleSubmit={handleSubmit} />
+      <button onClick={handleClearCompleted}>Clear Completed</button>
     </div>
   );
 };
