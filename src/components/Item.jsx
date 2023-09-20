@@ -1,16 +1,16 @@
 const Item = ({ item, handleClick, handleDelete }) => {
-  const { id, name, checked } = item;
+  const { id, name, completed } = item;
 
   return (
     <div>
       <h2>{name}</h2>
       <label htmlFor="checkbox">
-        Checked
+        Completed
         <input
           type="checkbox"
           name="checkbox"
           id="checkbox"
-          defaultChecked={checked}
+          defaultChecked={completed}
           onClick={(e) => handleClick(id)}
         />
       </label>

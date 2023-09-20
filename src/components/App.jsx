@@ -22,7 +22,7 @@ const App = () => {
       if (item.id === id) {
         return {
           ...item,
-          checked: !item.checked,
+          completed: !item.completed,
         };
       }
       return item;
@@ -36,7 +36,7 @@ const App = () => {
   };
 
   const handleClearCompleted = () => {
-    const updatedItems = items.filter((item) => !item.checked);
+    const updatedItems = items.filter((item) => !item.completed);
     setItems(updatedItems);
   };
 
@@ -49,7 +49,7 @@ const App = () => {
       const newItem = {
         id: uuidv4(),
         name: name,
-        checked: false
+        completed: false
       };
       const updatedItems = [...items, newItem];
       setItems(updatedItems);

@@ -1,5 +1,4 @@
 const Form = ({ name, setName, handleSubmit}) => {
-
   return (
     <form onSubmit={handleSubmit}>
       <label htmlFor="name">
