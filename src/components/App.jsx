@@ -1,21 +1,12 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 import ItemList from "./ItemList";
 import Form from "./Form";
+import useItemList from '../hooks/useItemList';
 
 const App = () => {
-  const [items, setItems] = useState([]);
+  const [items, setItems] = useItemList();;
   const [name, setName] = useState("");
-
-  useEffect(() => {
-    requestItems();
-  }, []);
-
-  const requestItems = async () => {
-    const response = await fetch('../../database/data.json');
-    const data = await response.json();
-    setItems(data.items);
-  };
 
   const handleClick = (id) => {
     const updatedItems = items.map((item) => {
