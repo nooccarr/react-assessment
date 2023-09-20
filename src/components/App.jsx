@@ -65,7 +65,7 @@ const App = () => {
       <main>
         <Form item={items} setName={setName} name={name} handleSubmit={handleSubmit} />
         <ItemList items={items} handleClick={handleClick} handleDelete={handleDelete} />
-        <button onClick={handleClearCompleted}>Clear Completed</button>
+        {items.length ? <button onClick={handleClearCompleted}>Clear Completed</button> : null}
       </main>
     </>
   );
