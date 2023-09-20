@@ -2,7 +2,7 @@ const Item = ({ item, handleClick, handleDelete }) => {
   const { id, name, completed } = item;
 
   return (
-    <div>
+    <li>
       <h2>{name}</h2>
       <label htmlFor="checkbox">
         Completed
@@ -17,7 +17,7 @@ const Item = ({ item, handleClick, handleDelete }) => {
       <button onClick={(e) => handleDelete(id)}>
         Delete
       </button>
-    </div>
+    </li>
   );
 };
 

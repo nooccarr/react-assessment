@@ -58,12 +58,16 @@ const App = () => {
   };
 
   return (
-    <div>
-      <h1>Shipping List</h1>
-      <ItemList items={items} handleClick={handleClick} handleDelete={handleDelete} />
-      <Form item={items} setName={setName} name={name} handleSubmit={handleSubmit} />
-      <button onClick={handleClearCompleted}>Clear Completed</button>
-    </div>
+    <>
+      <header>
+        <h1>Shipping List</h1>
+      </header>
+      <main>
+        <Form item={items} setName={setName} name={name} handleSubmit={handleSubmit} />
+        <ItemList items={items} handleClick={handleClick} handleDelete={handleDelete} />
+        <button onClick={handleClearCompleted}>Clear Completed</button>
+      </main>
+    </>
   );
 };
 
