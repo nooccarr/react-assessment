@@ -8,7 +8,7 @@ const Form = ({ items, name, setName, handleSubmit}) => {
           type="text"
           name="name"
           id="name"
-          required="true"
+          required={true}
           value={name}
           onChange={(e) => setName(e.target.value)}
         />

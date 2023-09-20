@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { v4 as uuidv4 } from 'uuid';
 import ItemList from "./ItemList";
 import Form from "./Form";
 
@@ -42,7 +43,7 @@ const App = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     const newItem = {
-      id: items.length + 1,
+      id: uuidv4(),
       name: name,
       checked: false
     };
