@@ -1,4 +1,4 @@
-const Form = ({ items, name, setName, handleSubmit}) => {
+const Form = ({ name, setName, handleSubmit}) => {
 
   return (
     <form onSubmit={handleSubmit}>

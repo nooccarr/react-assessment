@@ -42,14 +42,19 @@ const App = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const newItem = {
-      id: uuidv4(),
-      name: name,
-      checked: false
-    };
-    const updatedItems = [...items, newItem];
-    setItems(updatedItems);
-    setName("");
+    const found = items.find((item) => item.name === name);
+    if (found) {
+      alert(`${name} is already in your list!`);
+    } else {
+      const newItem = {
+        id: uuidv4(),
+        name: name,
+        checked: false
+      };
+      const updatedItems = [...items, newItem];
+      setItems(updatedItems);
+      setName("");
+    }
   };
 
   return (
