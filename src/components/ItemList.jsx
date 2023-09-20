@@ -1,8 +1,6 @@
 import Item from './Item';
 
 const ItemList = ({ items, handleClick, handleDelete }) => {
-
-
   return (
     <ul>
       {!items.length ? (

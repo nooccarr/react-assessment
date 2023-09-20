@@ -5,7 +5,7 @@ import Form from "./Form";
 import useItemList from '../hooks/useItemList';
 
 const App = () => {
-  const [items, setItems] = useItemList();;
+  const [items, setItems] = useItemList();
   const [name, setName] = useState("");
 
   const handleClick = (id) => {
