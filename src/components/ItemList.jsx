@@ -1,10 +1,8 @@
 import Item from './Item';
 
 const ItemList = ({ items, handleClick, handleDelete }) => {
-
-
   return (
-    <div>
+    <ul>
       {!items.length ? (
         <h2>Item list empty.</h2>
       ) : (
@@ -16,7 +14,7 @@ const ItemList = ({ items, handleClick, handleDelete }) => {
             key={item.id} />
         ))
       )}
-    </div>
+    </ul>
   );
 };
 

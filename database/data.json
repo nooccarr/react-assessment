@@ -3,22 +3,22 @@
     {
       "id": 1,
       "name": "Acrylic Prime Galvalume Coil",
-      "checked": false
+      "completed": false
     },
     {
       "id": 2,
       "name": "BTP Prime Aluminum Coil",
-      "checked": false
+      "completed": false
     },
     {
       "id": 3,
       "name": "Painted Prime Galvalume Coil",
-      "checked": false
+      "completed": false
     },
     {
       "id": 4,
       "name": "Red Oxide Purlin",
-      "checked": false
+      "completed": false
     }
   ]
 }
